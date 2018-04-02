@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/readPopTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/read_action_top_height"
+            android:background="@color/light_black"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/read_go_back_ib"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:src="@drawable/top_back_selector" />
+
+            <TextView
+                android:id="@+id/read_title_tv"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_30" />
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/read_bookmark_ib"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/read_shuqian" />
+
+            <ImageButton
+                android:id="@+id/read_top_list"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/read_top_list" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

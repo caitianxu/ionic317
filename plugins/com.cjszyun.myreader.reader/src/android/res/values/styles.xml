@@ -1,0 +1,162 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="WrapWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MatchWarp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WarpMatch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="bookstore_tag_image">
+        <item name="android:layout_width">58dp</item>
+        <item name="android:layout_height">58dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="gray_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#eee</item>
+    </style>
+
+    <style name="maxEms7" parent="WrapWrap">
+        <item name="android:maxLines">1</item>
+        <item name="android:maxEms">7</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="maxEms6" parent="WrapWrap">
+        <item name="android:maxLines">1</item>
+        <item name="android:maxEms">6</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="maxEms5" parent="WrapWrap">
+        <item name="android:maxLines">1</item>
+        <item name="android:maxEms">5</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="oneLine" parent="WrapWrap">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="threeLine" parent="WrapWrap">
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="fourLine" parent="WrapWrap">
+        <item name="android:maxLines">4</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- drop down list -->
+    <style name="drop_down_list_header_progress_bar_style">
+        <item name="android:minHeight">@dimen/drop_down_list_header_progress_bar_height</item>
+        <item name="android:maxHeight">@dimen/drop_down_list_header_progress_bar_height</item>
+    </style>
+
+    <style name="drop_down_list_footer_progress_bar_style">
+        <item name="android:minHeight">@dimen/drop_down_list_footer_progress_bar_height</item>
+        <item name="android:maxHeight">@dimen/drop_down_list_footer_progress_bar_height</item>
+    </style>
+
+    <style name="drop_down_list_footer_font_style">
+        <item name="android:textColor">@color/drop_down_list_footer_font_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="drop_down_list_header_font_style">
+        <item name="android:textColor">@color/drop_down_list_header_font_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="drop_down_list_header_second_font_style">
+        <item name="android:textColor">@color/drop_down_list_header_second_font_color</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+    <style name="pop_read_end_anim">
+        <item name="android:windowEnterAnimation">@anim/move_right_in</item>
+        <item name="android:windowExitAnimation">@anim/move_left_out</item>
+    </style>
+
+    <style name="style_coverGridView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:columnWidth">83.0dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:horizontalSpacing">10.0dip</item>
+        <item name="android:numColumns">4</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:stretchMode">columnWidth</item>
+        <item name="android:verticalSpacing">10.0dip</item>
+    </style>
+    <!--popwindow动画-->
+    <style name="bottompopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popbottomshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/popbottomhidden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+    <style name="toppopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/poptopshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/poptophidden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+    <style name="toppopwindowlist_anim_style">
+        <item name="android:windowEnterAnimation">@anim/poplist_enter</item>
+        <item name="android:windowExitAnimation">@anim/poplist_exit</item>
+    </style>
+    <style name="style_RadioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="MyDialogStyleBottom" parent="AppBaseTheme">
+        <item name="android:windowFullscreen">true</item>
+        <!--动画效果-->
+        <item name="android:windowAnimationStyle">@style/AnimLeft</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="AnimLeft" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/move_left_in</item>
+        <item name="android:windowExitAnimation">@anim/move_right_out</item>
+    </style>
+
+</resources>

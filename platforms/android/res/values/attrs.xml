@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="drop_down_list_attr">
+        <attr name="isDropDownStyle" format="boolean" />
+        <attr name="isOnBottomStyle" format="boolean" />
+        <attr name="isAutoLoadOnBottom" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleBgImageView">
+        <attr name="bgColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="WordWrapView">
+        <attr name="childPaddingHor" format="dimension"/>
+        <attr name="childPaddingVer" format="dimension"/>
+        <attr name="childTextSize" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="BlurImageView">
+        <attr name="heightScale" format="float"/>
+        <attr name="bitmap_scale" format="float"/>
+        <attr name="blur_radius" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyEditText">
+        <attr name="left_drawable_color" format="color" />
+        <attr name="right_drawable_color" format="color" />
+        <attr name="right_drawable_pwd_color" format="color" />
+        <attr name="focus_underLine_color" format="color" />
+        <attr name="not_focus_underLine_color" format="color" />
+        <attr name="focus_underLine_width" format="dimension" />
+        <attr name="not_focus_underLine_width" format="dimension" />
+    </declare-styleable>
+</resources>

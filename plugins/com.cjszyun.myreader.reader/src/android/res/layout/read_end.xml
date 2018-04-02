@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ef000000" >
+
+    <Button
+        android:id="@+id/go_bookstore_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="100.0dp"
+        android:layout_marginRight="100.0dp"
+        android:background="@drawable/btn_orange_selector"
+        android:text="返回书城" />
+
+    <Button
+        android:id="@+id/go_bookshelf_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/go_bookstore_btn"
+        android:layout_marginLeft="100.0dp"
+        android:layout_marginRight="100.0dp"
+        android:layout_marginTop="@dimen/LargerPadding"
+        android:background="@drawable/btn_orange_selector"
+        android:text="返回书架" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/go_bookstore_btn"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="恭喜读完本书"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_45" />
+
+</RelativeLayout>

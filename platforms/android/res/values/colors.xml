@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="color_label">
+        <item name="0">0x887ce974</item>
+        <item name="1">0x88ffa07a</item>
+        <item name="2">0x884cd1b2</item>
+        <item name="3">0x88db8dbf</item>
+        <item name="4">0x88f3c555</item>
+        <item name="5">0x88a1a4cd</item>
+    </integer-array>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="read_bg1">#D0C29F</color>
+    <color name="read_bg2">#E3E3E3</color>
+    <color name="read_bg3">#C7D9BD</color>
+    <color name="read_bg4">#DACAAE</color>
+    <color name="read_text_night">#ff646464</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gray">#ffD8D8D8</color>
+    <color name="black">#dd000000</color>
+    <color name="dark_gray">#d666</color>
+    <color name="light_gray">#88E6E6E6</color>
+    <color name="read_green">#ee59C293</color>
+    <color name="read_green_light">#aa9CC99C</color>
+
+    <color name="light_black">#dd000000</color>
+    <color name="tran_gray">#bb000000</color>
+    <color name="tran">#0000</color>
+    <color name="tran1">#3000</color>
+    <color name="drop_down_list_header_font_color">#000000</color>
+    <!-- drop down list header second font color -->
+    <color name="drop_down_list_header_second_font_color">#000000</color>
+    <!-- drop down list footer font color -->
+    <color name="drop_down_list_footer_font_color">#000000</color>
+
+    <color name="detail_divider_day">#ffb4b4b4</color>
+    <color name="detail_divider_night">#ff464646</color>
+</resources>

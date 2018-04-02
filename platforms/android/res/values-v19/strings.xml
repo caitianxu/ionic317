@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">长江阅读</string>
+    <!-- DropDownListView -->
+    <string name="drop_down_list_header_default_text">点击可以刷新</string>
+    <string name="drop_down_list_header_pull_text">下拉可以刷新</string>
+    <string name="drop_down_list_header_release_text">松开刷新</string>
+    <string name="drop_down_list_header_loading_text">加载中</string>
+    <string name="drop_down_list_footer_default_text">更多</string>
+    <string name="drop_down_switch_footer_default_text">换一换</string>
+    <string name="drop_down_list_footer_loading_text">加载中</string>
+    <string name="drop_down_list_footer_no_more_text">没有更多了</string>
+    <!-- read  -->
+    <string name="system_brightness">使用系统亮度设置</string>
+    <string name="font_sub">A-</string>
+    <string name="font_add">A+</string>
+    <string name="page_curl">仿真</string>
+    <string name="page_shift">平移</string>
+    <string name="page_none">无效果</string>
+    <string name="page_fade">fade</string>
+    <string name="margin_lr">左右边距</string>
+    <string name="line_space">行间距　</string>
+    <string name="paragraph_space">段间距　</string>
+    <string name="loading">加载中...</string>
+    <string name="NotReadVipChapter_Because_NotLogin">请登录后阅读vip章节</string>
+</resources>

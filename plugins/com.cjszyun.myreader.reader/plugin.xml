@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android" id="com.cjszyun.myreader.reader"
+		version="5.3.0">
+	<name>BookReadPlgin</name>
+	<engines>
+		<engine name="cordova" version=">=3.5.0" />
+	</engines>
+
+	<js-module src="www/bookreader.js" name="BookRead">
+		<clobbers target="navigator.BookRead" />
+	</js-module>
+
+	<platform name="ios">
+		<config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
+			<string>Chian</string>
+		</config-file>
+		<!--ios9不允许http访问，需要使用https访问，添加以下属性使http正常使用 -->
+		<config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+			<dict>
+				<key>NSAllowsArbitraryLoads</key>
+				<true />
+			</dict>
+		</config-file>
+		<!-- build setting header search path $(SRCROOT)/X5 -->
+		<header-file src="src/ios/CDVBookRead.h" />
+		<source-file src="src/ios/CDVBookRead.m" />
+		<config-file target="config.xml" parent="/*">
+			<feature name="BookRead">
+				<param name="ios-package" value="CDVBookRead" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+	</platform>
+
+	<platform name="android">
+		<source-file src="src/android/com/cjszyun/myreader/reader/BookReader.java"
+					 target-dir="src/com/cjszyun/myreader/reader"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/AppData.java"
+					 target-dir="src/com/cjszyun/myreader/reader"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/ReadClient.java"
+					 target-dir="src/com/cjszyun/myreader/reader"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/BookBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/BookBuyBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/BookMarkBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/BookMarkListBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/BookReviewInfo.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/ChapterBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/EpubChapterBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/EpubChapterContentBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/LinePosition.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/beans/EventBean.java"
+					 target-dir="src/com/cjszyun/myreader/reader/beans"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/config/ReadConfig.java"
+					 target-dir="src/com/cjszyun/myreader/reader/config"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/Chapter.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/ChapterManager.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/ChapterParser.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/ClientUser.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/Config.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/DownloadEpubPicTask.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/OnlineChapter.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/OnlinePage.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enginee/Page.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enginee"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/enums/ChapterAction.java"
+					 target-dir="src/com/cjszyun/myreader/reader/enums"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/model/BookModel.java"
+					 target-dir="src/com/cjszyun/myreader/reader/model"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/model/BookMsg.java"
+					 target-dir="src/com/cjszyun/myreader/reader/model"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/model/Model.java"
+					 target-dir="src/com/cjszyun/myreader/reader/model"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/task/CallBackTask.java"
+					 target-dir="src/com/cjszyun/myreader/reader/task"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/task/Task.java"
+					 target-dir="src/com/cjszyun/myreader/reader/task"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/task/TaskManager.java"
+					 target-dir="src/com/cjszyun/myreader/reader/task"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/AES.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/Base64Util.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/CrashHandler.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/DebugLog.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/DeviceUtil.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/DisplayUtil.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/FileUtil.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/NetUtil.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/SharedPreUtil.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/utils/UrlHelper.java"
+					 target-dir="src/com/cjszyun/myreader/reader/utils"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/views/BaseActivity.java"
+					 target-dir="src/com/cjszyun/myreader/reader/views"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/views/ChaptersActivity.java"
+					 target-dir="src/com/cjszyun/myreader/reader/views"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/views/OnlineReadActivity.java"
+					 target-dir="src/com/cjszyun/myreader/reader/views"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/views/PageWidget.java"
+					 target-dir="src/com/cjszyun/myreader/reader/views"></source-file>
+		<source-file src="src/android/com/cjszyun/myreader/reader/views/ReadActivity.java"
+					 target-dir="src/com/cjszyun/myreader/reader/views"></source-file>
+
+		<!--资源-->
+		<source-file src="src/android/res/anim/move_left_in.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/move_left_out.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/move_right_in.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/move_right_out.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/popbottomhidden_anim.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/popbottomshow_anim.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/poptophidden_anim.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/poptopshow_anim.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/poplist_enter.xml"
+					 target-dir="res/anim"></source-file>
+		<source-file src="src/android/res/anim/poplist_exit.xml"
+					 target-dir="res/anim"></source-file>
+
+		<source-file src="src/android/res/color/tv_selector.xml"
+					 target-dir="res/color"></source-file>
+
+		<source-file src="src/android/res/drawable/day_night_round.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/graybg_round.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/grayline2redline_round_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/grayline2redline_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/lightblack2black_bg_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/read_bg1_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/read_bg2_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/read_bg3_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/read_bg4_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/red_round.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/redbg_blackline_bg.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/redbg_drakredline_bg.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/redline_bg.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/redline_bg2.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/seekbar_progress.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/top_back_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/tran2graybg_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/tranbg_grayline_round.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/white2gray_selector.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/white_round.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/whitebg_round.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/whitebg_grayline.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/whitebg_grayline_round.xml"
+					 target-dir="res/drawable"></source-file>
+		<source-file src="src/android/res/drawable/btn_orange_selector.xml"
+					 target-dir="res/drawable"></source-file>
+
+		<source-file src="src/android/res/drawable-xxhdpi/btn_orange_normal.9.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/btn_orange_pressed.9.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/close.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/comment_down.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/comment_up.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/ds.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/mark.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/mark_red.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/pencil.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg.jpg"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg1_new1.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg1_new2.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg2_new1.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg2_new2.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg3_new1.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg3_new2.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg4_new1.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_bg4_new2.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_day.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_download.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_ds.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_light.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_menu.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_night.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_setting.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_shuqian.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_shuqian2.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_top_list.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/read_wz.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/search.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/share.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/tag_line_space.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/tag_margin_lr.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/tag_paragraph_space.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/top_back_normal.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+		<source-file src="src/android/res/drawable-xxhdpi/top_back_pressed.png"
+					 target-dir="res/drawable-xxhdpi"></source-file>
+
+		<source-file src="src/android/res/layout/drop_down_list_footer.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/drop_down_list_header.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_action_bottom.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_action_bright.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_action_ds.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_action_more.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_action_progress.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_action_top.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_action_top_list.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_end.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_pop_buy_publish.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/read_progress.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/reader_bookmark_item.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/reader_chapters.xml"
+					 target-dir="res/layout"></source-file>
+		<source-file src="src/android/res/layout/reader_chapters_item.xml"
+					 target-dir="res/layout"></source-file>
+
+		<source-file src="src/android/res/values/attrs.xml"
+					 target-dir="res/values"></source-file>
+		<source-file src="src/android/res/values/colors.xml"
+					 target-dir="res/values"></source-file>
+		<source-file src="src/android/res/values/dimens.xml"
+					 target-dir="res/values"></source-file>
+		<source-file src="src/android/res/values/styles.xml"
+					 target-dir="res/values"></source-file>
+		<source-file src="src/android/res/values-v19/strings.xml"
+					 target-dir="res/values-v19"></source-file>
+		<source-file src="src/android/res/values-v19/styles.xml"
+					 target-dir="res/values-v19"></source-file>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="BookReader">
+				<param name="android-package" value="com.cjszyun.myreader.reader.BookReader" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/chardet-1.0.jar" target-dir="libs" />
+		<source-file src="src/android/cpdetector_1.0.10.jar" target-dir="libs" />
+		<source-file src="src/android/systembartint-1.0.4.jar" target-dir="libs" />
+
+		<source-file src="src/android/fzkt.ttf" target-dir="assets" />
+		<source-file src="src/android/fzst.ttf" target-dir="assets" />
+
+		<framework src="com.squareup.picasso:picasso:2.5.2"/>
+		<framework src="com.android.support.constraint:constraint-layout:1.0.2"/>
+		<framework src="com.mcxiaoke.volley:library:1.0.19"/>
+		<framework src="com.google.code.gson:gson:2.8.0"/>
+		<framework src="com.zhy:okhttputils:2.6.2"/>
+		<framework src="me.weyye.hipermission:library:1.0.7"/>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:name="com.cjszyun.myreader.reader.views.ChaptersActivity" android:theme="@style/MyDialogStyleBottom" />
+			<activity android:name="com.cjszyun.myreader.reader.views.OnlineReadActivity" android:theme="@style/ReadTheme" />
+		</config-file>
+	</platform>
+</plugin>

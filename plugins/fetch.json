@@ -1,0 +1,170 @@
+{
+  "ionic-plugin-keyboard": {
+    "source": {
+      "type": "registry",
+      "id": "ionic-plugin-keyboard@~2.2.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1.3.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device@1.1.4"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@~4.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ionic-webview": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-ionic-webview@^1.1.11"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.yoopoon.cordova.plugin.alipay": {
+    "source": {
+      "type": "local",
+      "path": "../cordova-alipay/com.yoopoon.cordova.plugin.alipay"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.weixin.pay": {
+    "source": {
+      "type": "local",
+      "path": "../cordova-weixin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.cjszyun.myreader.reader": {
+    "source": {
+      "type": "local",
+      "path": "../cordova-cjzww-book-read/com.cjszyun.myreader.reader"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-weibosdk": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-weibosdk"
+    },
+    "is_top_level": true,
+    "variables": {
+      "WEIBO_APP_ID": "3963642066"
+    }
+  },
+  "cordova-plugin-qqsdk": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-qqsdk"
+    },
+    "is_top_level": true,
+    "variables": {
+      "QQ_APP_ID": "1104773315"
+    }
+  },
+  "cordova-plugin-wechat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-wechat@2.0.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "WECHATAPPID": "wx1726323de580e8ba"
+    }
+  },
+  "cordova-plugin-dialogs": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-dialogs"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-file": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file@5.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.0.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-file-transfer": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file-transfer"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-file-opener2": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file-opener2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "phonegap-plugin-barcodescanner": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-barcodescanner@7.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-statusbar": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-statusbar@2.2.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@3.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.synconset.imagepicker": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-telerik-imagepicker@^2.1.8"
+    },
+    "is_top_level": true,
+    "variables": {
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": "长江阅读需要使用您的相册"
+    }
+  }
+}

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+    <style>
+        html,body{
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .yhtj *{
+            box-sizing: border-box;
+        }
+        .cjitem *{
+            box-sizing: border-box;
+        }
+        .yhtj{
+            padding: 0;
+        }
+        .tj_title{
+            position: relative;
+            height: 40px;
+            color: #999;
+            line-height: 36px;
+            text-align: center;
+            padding: 0 15px;
+        }
+        .tj_title::after{
+            content: " ";
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            bottom: 20px;
+            height: 1px;
+            border-bottom: 1px solid #ccc;
+            color: #979797;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+            z-index: 1;
+        }
+        .tj_title label{
+            background: #fff;
+            position: absolute;
+            z-index: 2;
+            width: 120px;
+            left: 50%;
+            margin-left: -60px;
+        }
+        .tj_item_par{
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .tj_item{
+            border: 1px #ffd2d3 solid;
+            background: #fff6f6;
+            float: left;
+            width: 100%;
+            position: relative;
+        }
+        .tj_item .tj_item_left{
+            float: left;
+            width: 70%;
+            padding: 10px;
+        }
+        .tj_item .tj_item_right{
+            float: right;
+            width: 30%;
+            border-left: 1px #ffd2d3 dashed;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            line-height: 15vw;
+        }
+        .tj_item .tj_item_right .s1{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px #ffd2d3 solid;
+            border-radius: 20px;
+            left: -10px;
+            top: -10px;
+        }
+        .tj_item .tj_item_right .s2{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px #ffd2d3 solid;
+            border-radius: 20px;
+            left: -10px;
+            bottom: -10px;
+        }
+        .tj_item .tj_item_right button{
+            background: #fb6165;
+            color: #fff;
+            border-radius: 15vw;
+            border:none;
+            line-height: 8vw;
+            padding: 0 3vw;
+        }
+        .tj_item_left .left_cover{
+            float: left;
+            width: 15vw;
+            height: 15vw;
+            text-align: center;
+            line-height: 15vw;
+            overflow: hidden;
+        }
+        .tj_item_left img{
+            width: 100%;
+        }
+        .tj_item_left .left_detail{
+            float: left;
+            width: calc(100% - 15vw);
+            width: -moz-calc(100% - 15vw);
+            width: -webkit-calc(100% - 15vw);
+            padding: 0 0 0 10px;
+        }
+        .tj_item_left .left_detail h1{
+            float: left;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .tj_item_left .left_detail h2{
+            float: left;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 500;
+            margin:  0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #fb6165;
+        }
+        .tj_item_left .left_detail h3{
+            float: left;
+            width: 100%;
+            font-size: 12px;
+            margin:  0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #999;
+            font-weight: normal;
+        }
+        .tj_list{
+            border-bottom: 1px #f4f4f4 solid;
+            padding: 0 15px 5px 15px;
+        }
+        .cjitem{
+            padding: 15px;
+            display: inline-block;
+            width: 100%;
+            border-bottom: 15px #f0f0f0 solid;
+        }
+        .cjitem .cj_left{
+            padding-left: 36px;
+            float: left;
+            width: 60%;
+
+            background-image: url('https://img.alicdn.com/tps/TB1twKDJFXXXXbtXVXXXXXXXXXX-92-92.png_760x760Q50s50.jpg');
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            background-size: 30px 30px;
+        }
+        .cjitem .cj_left .c1{
+            float: left;
+            width: 100%;
+            font-size: 15px;
+            line-height: 22px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .cjitem .cj_left .c2{
+            float: left;
+            width: 100%;
+            font-size: 12px;
+            color: #999;
+            line-height: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .cjitem .cj_right {
+            float: right;
+            width: 40%;
+            text-align: right;
+            line-height: 38px;
+        }
+        .cjitem .cj_right a{
+            line-height: 30px;
+            border:1px #38b6a8 solid;
+            display: inline-block;
+            padding:  0 15px;
+            color: #38b6a8;
+        }
+        .itemgap{
+            display: inline-block;
+            width: 100%;
+            position: relative;
+        }
+        .itemgap img{
+            float: left;
+            width: 100%;
+        }
+        .itemgap i{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #696969;
+            color: #999;
+            font-style: normal;
+            padding: 2px 10px;
+        }
+        .yhtjs{
+            display: inline-block;
+            width: 100%;
+        }
+        .item_other{
+            display: inline-block;
+            width: 100%;
+        }
+        .item_other .other_title{
+            padding: 10px 15px;
+            border-top: 1px #eee solid;
+            border-bottom: 1px #eee solid;
+            font-size: 14px;
+            color: #787878;
+            float: left;
+            width: 100%;
+        }
+        .item_other .other_title label{
+            float: right;
+            color: #999
+        }
+        .oth_s{
+            float: left;
+            width: 100%;
+            padding: 0 15px 15px 15px;
+        }
+        .oth_s .oth_item{
+            float: left;
+            width: 50%;
+            padding: 10px 6px 0 0;
+        }
+        .oth_s .oth_item:nth-child(2n){
+            padding: 10px 0 0 6px;
+        }
+        .oth_s .oth_item a{
+            float: left;
+            width: 100%;
+        }
+        .oth_s .oth_item a .cover{
+            float: left;
+            width: 100%;
+        }
+        .oth_s .oth_item a .cover img{
+            float: left;
+            width: 100%;
+            border-radius: 5px;
+            height: 25vw;
+        }
+        .oth_s .oth_item a h1{
+            float: left;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 5px 0 0 0;
+        }
+        .oth_s .oth_item a .m1{
+            float: left;
+            margin-right: 10px;
+            font-size: 20px;
+            color: #1ac0b0;
+            line-height: 22px;
+        }
+        .oth_s .oth_item a .m1 em{
+            font-size: 14px;
+            font-style: normal;
+        }
+        .oth_s .oth_item a .m2{
+            float: left;
+            margin-right: 10px;
+            font-size: 12px;
+            color: #999;
+            text-decoration: line-through;
+            line-height: 28px;
+        }
+        .oth_s .oth_item a .m3{
+            float: right;
+            margin-right: 10px;
+            font-size: 12px;
+            color: #999;
+            line-height: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yhtj">
+        <div class="yhtjs">
+            <div class="tj_title"><label>附近优惠推荐</label></div>
+            <div class="tj_list">
+                <div class="tj_item_par">
+                    <div class="tj_item">
+                        <div class="tj_item_left">
+                            <div class="left_cover"><img src="http://img.alicdn.com/imgextra/i1/725677994/TB271.zb8LN8KJjSZFPXXXoLXXa_!!725677994.jpg_430x430q90.jpg"/></div>
+                            <div class="left_detail">
+                                <h1>全为桂林米粉全场代金券</h1>
+                                <h2>1元代金券</h2>
+                                <h3>1.2km</h3>
+                            </div>
+                        </div>
+                        <div class="tj_item_right">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <button>免费领券</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tj_item_par">
+                    <div class="tj_item">
+                        <div class="tj_item_left">
+                            <div class="left_cover"><img src="http://img.alicdn.com/imgextra/i1/725677994/TB271.zb8LN8KJjSZFPXXXoLXXa_!!725677994.jpg_430x430q90.jpg"/></div>
+                            <div class="left_detail">
+                                <h1>全为桂林米粉全场代金券</h1>
+                                <h2>1元代金券</h2>
+                                <h3>1.2km</h3>
+                            </div>
+                        </div>
+                        <div class="tj_item_right">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <button>免费领券</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="tj_item_par">
+                    <div class="tj_item">
+                        <div class="tj_item_left">
+                            <div class="left_cover"><img src="http://img.alicdn.com/imgextra/i1/725677994/TB271.zb8LN8KJjSZFPXXXoLXXa_!!725677994.jpg_430x430q90.jpg"/></div>
+                            <div class="left_detail">
+                                <h1>全为桂林米粉全场代金券</h1>
+                                <h2>1元代金券</h2>
+                                <h3>1.2km</h3>
+                            </div>
+                        </div>
+                        <div class="tj_item_right">
+                            <span class="s1"></span>
+                            <span class="s2"></span>
+                            <button>免费领券</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cjitem">
+            <div class="cj_left">
+                <div class="c1">恭喜您获得2次抽奖机会</div>
+                <div class="c2">赢取100元美食券  点击查看</div>
+            </div>
+            <div class="cj_right"><a>查看</a></div>
+        </div>
+
+        <div class="itemgap">
+            <i>广告</i>
+            <a><img src="https://img.alicdn.com/tps/i4/TB17bwZf8TH8KJjy0FiSuwRsXXa.jpg_760x760Q75s50.jpg"></a>
+        </div>
+
+        <div class="item_other">
+            <div class="other_title">
+                看了本套餐的用户还看了
+                <label>广告</label>
+            </div>
+            <div class="oth_s">
+                <div class="oth_item">
+                    <a href="">
+                        <div class="cover"><img src="https://img.alicdn.com/tfs/TB1e78rfRfH8KJjy1XbXXbLdXXa-1125-543.jpg_760x760Q75s50.jpg"></div>
+                        <h1>阿斯顿号回家回家后主题餐厅</h1>
+                        <div class="sss">
+                            <label class="m1">28<em>元</em></label>
+                            <label class="m2">38元</label>
+                            <label class="m3">>5km</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="oth_item">
+                    <a href="">
+                        <div class="cover"><img src="https://img.alicdn.com/tfs/TB1e78rfRfH8KJjy1XbXXbLdXXa-1125-543.jpg_760x760Q75s50.jpg"></div>
+                        <h1>阿斯顿号回家回家后主题餐厅</h1>
+                        <div class="sss">
+                            <label class="m1">28<em>元</em></label>
+                            <label class="m2">38元</label>
+                            <label class="m3">>5km</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="oth_item">
+                    <a href="">
+                        <div class="cover"><img src="https://img.alicdn.com/tfs/TB1e78rfRfH8KJjy1XbXXbLdXXa-1125-543.jpg_760x760Q75s50.jpg"></div>
+                        <h1>阿斯顿号回家回家后主题餐厅</h1>
+                        <div class="sss">
+                            <label class="m1">28<em>元</em></label>
+                            <label class="m2">38元</label>
+                            <label class="m3">>5km</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="oth_item">
+                    <a href="">
+                        <div class="cover"><img src="https://img.alicdn.com/tfs/TB1e78rfRfH8KJjy1XbXXbLdXXa-1125-543.jpg_760x760Q75s50.jpg"></div>
+                        <h1>阿斯顿号回家回家后主题餐厅</h1>
+                        <div class="sss">
+                            <label class="m1">28<em>元</em></label>
+                            <label class="m2">38元</label>
+                            <label class="m3">>5km</label>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>

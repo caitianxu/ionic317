@@ -1,0 +1,18 @@
+//
+//  CDVAlipay.h
+//  X5
+//
+//  Created by 007slm on 12/8/14.
+//
+//
+
+#import <Foundation/Foundation.h>
+
+#import <Cordova/CDV.h>
+#import <Cordova/CDVPlugin.h>
+
+@interface CDVBookRead : CDVPlugin
+
+
+- (void)reader:(CDVInvokedUrlCommand*)command;
+@end

@@ -1,0 +1,67 @@
+{
+  "_from": "cordova-plugin-weibosdk",
+  "_id": "cordova-plugin-weibosdk@0.6.1",
+  "_inBundle": false,
+  "_integrity": "sha1-UPIMnQ8h3GgiVn+i/bmNvvuFA50=",
+  "_location": "/cordova-plugin-weibosdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-weibosdk",
+    "name": "cordova-plugin-weibosdk",
+    "escapedName": "cordova-plugin-weibosdk",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/cordova-plugin-weibosdk/download/cordova-plugin-weibosdk-0.6.1.tgz",
+  "_shasum": "50f20c9d0f21dc6822567fa2fdb98dbefb85039d",
+  "_spec": "cordova-plugin-weibosdk",
+  "_where": "d:\\Java_home\\app317",
+  "author": {
+    "name": "https://github.com/iVanPan"
+  },
+  "bugs": {
+    "url": "https://github.com/iVanPan/cordova_weibo/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-weibosdk",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "codrova/phonegap wrapper for weibo sdk",
+  "homepage": "https://github.com/iVanPan/cordova_weibo",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova",
+    "phonegap",
+    "plugin",
+    "weibosdk",
+    "weibo",
+    "sina",
+    "login",
+    "share"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cordova-plugin-weibosdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iVanPan/cordova_weibo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.6.1"
+}

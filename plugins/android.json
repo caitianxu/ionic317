@@ -1,0 +1,73 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.cjszyun.myreader.reader": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "com.synconset.imagepicker": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "com.yoopoon.cordova.plugin.alipay": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-file-opener2": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-qqsdk": {
+      "QQ_APP_ID": "1104773315",
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-wechat": {
+      "WECHATAPPID": "wx1726323de580e8ba",
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-weibosdk": {
+      "WEIBO_APP_ID": "3963642066",
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    }
+  },
+  "dependent_plugins": {
+    "cordova.weixin.pay": {
+      "PACKAGE_NAME": "com.cjzww.cjreader"
+    }
+  }
+}
